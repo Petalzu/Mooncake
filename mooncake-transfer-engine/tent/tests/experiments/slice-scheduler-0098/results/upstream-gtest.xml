@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="92" failures="0" disabled="0" errors="0" time="13.614" timestamp="2026-10-10T04:40:27.619" name="AllTests">
+  <testsuite name="DeviceSelectorBandwidthTest" tests="7" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-10-10T04:40:27.619">
+    <testcase name="LinkSpeedSeedsEwma" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorBandwidthTest" />
+    <testcase name="UnknownLinkSpeedUsesConfiguredDefault" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorBandwidthTest" />
+    <testcase name="OutOfRangeLinkSpeedUsesConfiguredDefault" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorBandwidthTest" />
+    <testcase name="UnknownDeviceIsRejected" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorBandwidthTest" />
+    <testcase name="EwmaLearnsRealRateOn25GLink" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorBandwidthTest" />
+    <testcase name="EwmaClampScalesWithLinkSpeed" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorBandwidthTest" />
+    <testcase name="ReseedOnLinkSpeedChangeReleasesStaleClamp" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorBandwidthTest" />
+  </testsuite>
+  <testsuite name="DeviceSelectorAvailabilityTest" tests="6" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-10-10T04:40:27.619">
+    <testcase name="DevicesStartAvailable" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorAvailabilityTest" />
+    <testcase name="UnavailableDeviceLeavesAggregate" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorAvailabilityTest" />
+    <testcase name="UnavailableDeviceLeavesLoadStats" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorAvailabilityTest" />
+    <testcase name="UnavailableDeviceIsNeverAllocated" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorAvailabilityTest" />
+    <testcase name="AllDevicesUnavailable" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorAvailabilityTest" />
+    <testcase name="PriorityFallbackKeepsUnavailableOut" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorAvailabilityTest" />
+  </testsuite>
+  <testsuite name="DeviceSelectorTransmitTest" tests="16" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-10-10T04:40:27.619">
+    <testcase name="InflightBytesPerDevice" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="MultiPathChargesActualSliceBytes" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="LearningRatesAreClampedToUnitInterval" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="SeededFromLinkSpeed" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="RateIsIndependentOfBatchDepth" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="SelectionKeepsQueueingThatTransmitDrops" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="BusyTimeCountsOnlyStretchesWithWorkPosted" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="OutOfOrderTransitionBanksNothing" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="OnlyTheBusyPartOfAnIntervalIsMeasured" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="StaleIntervalsAreNotSamples" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="MeterHonoursItsInterval" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="SmoothsSingleOutlier" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="ReleaseDoesNotFeedTheTransmitEstimate" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="ClampScalesWithLinkSpeed" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="ResetStartsTheNextIntervalFresh" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+    <testcase name="PostedBytesTrackTheHardwareBacklog" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitTest" />
+  </testsuite>
+  <testsuite name="DeviceSelectorTransmitAccuracyTest" tests="9" failures="0" disabled="0" skipped="0" errors="0" time="0.012" timestamp="2026-10-10T04:40:27.619">
+    <testcase name="SteadyRateIsRecovered" status="run" result="completed" time="0.007" timestamp="2026-10-10T04:40:27.619" classname="DeviceSelectorTransmitAccuracyTest">
+<properties>
+<property name="poll_batch_1" value="lo=8000000000.000 hi=8000000000.000 worst_rel_err=3.576e-16"/>
+<property name="poll_batch_16" value="lo=8000000000.000 hi=8000000000.000 worst_rel_err=3.576e-16"/>
+<property name="poll_batch_64" value="lo=8000000000.000 hi=8000000000.000 worst_rel_err=3.576e-16"/>
+</properties>
+    </testcase>
+    <testcase name="SliceSizeDoesNotSkewTheEstimate" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.626" classname="DeviceSelectorTransmitAccuracyTest">
+<properties>
+<property name="estimate" value="lo=7999999999.994 hi=8000000000.000 worst_rel_err=6.951e-13"/>
+</properties>
+    </testcase>
+    <testcase name="BurstyWireConvergesOnItsMean" status="run" result="completed" time="0.001" timestamp="2026-10-10T04:40:27.626" classname="DeviceSelectorTransmitAccuracyTest">
+<properties>
+<property name="estimate" value="lo=7918538327.426 hi=8097886057.419 worst_rel_err=1.224e-02"/>
+</properties>
+    </testcase>
+    <testcase name="FollowsALinkThatSlowsDown" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.628" classname="DeviceSelectorTransmitAccuracyTest">
+<properties>
+<property name="ms_to_within_5pct" value="478"/>
+</properties>
+    </testcase>
+    <testcase name="IdleTimeIsNotChargedToTheLink" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.628" classname="DeviceSelectorTransmitAccuracyTest">
+<properties>
+<property name="estimate" value="lo=8000000000.000 hi=8000000000.000 worst_rel_err=3.576e-16"/>
+</properties>
+    </testcase>
+    <testcase name="DutyCyclePastTheCutOffIsRejected" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.628" classname="DeviceSelectorTransmitAccuracyTest">
+<properties>
+<property name="estimate" value="3125000000.000000"/>
+</properties>
+    </testcase>
+    <testcase name="OrderingIsUnaffectedByARateError" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.629" classname="DeviceSelectorTransmitAccuracyTest" />
+    <testcase name="CoarsePollingDoesNotSkewTheEstimate" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.629" classname="DeviceSelectorTransmitAccuracyTest">
+<properties>
+<property name="estimate" value="lo=2000000000.000 hi=2000000000.001 worst_rel_err=5.778e-13"/>
+</properties>
+    </testcase>
+    <testcase name="RateAboveTheClampIsNotMeasurable" status="run" result="completed" time="0.002" timestamp="2026-10-10T04:40:27.629" classname="DeviceSelectorTransmitAccuracyTest">
+<properties>
+<property name="estimate" value="31250000000.000000"/>
+</properties>
+    </testcase>
+  </testsuite>
+  <testsuite name="DeviceSelectorLayoutTest" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-10-10T04:40:27.632">
+    <testcase name="HotCountersSitOnTheirOwnCacheLines" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="DeviceSelectorLayoutTest" />
+  </testsuite>
+  <testsuite name="StrictLocalNumaTest" tests="11" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-10-10T04:40:27.632">
+    <testcase name="SmartModeNeverPicksCrossNumaWhenLocalExists" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="StrictLocalNumaTest" />
+    <testcase name="SmartModeReturnsDeviceNotFoundWithoutLocalNic" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="StrictLocalNumaTest" />
+    <testcase name="NonStrictModeFallsBackToCrossNuma" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="StrictLocalNumaTest" />
+    <testcase name="BaselineModeExcludesCrossNuma" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="StrictLocalNumaTest" />
+    <testcase name="BaselineNonStrictFallsBackToCrossNuma" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="StrictLocalNumaTest" />
+    <testcase name="FallbackDoesNotReintroduceCrossNuma" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="StrictLocalNumaTest" />
+    <testcase name="UnknownNicNumaIsNotExcluded" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="StrictLocalNumaTest" />
+    <testcase name="UnknownMemoryNumaIsNotExcluded" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="StrictLocalNumaTest" />
+    <testcase name="RemoteNicPromotedToFirstRankIsStillExcluded" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="StrictLocalNumaTest" />
+    <testcase name="PriorityMatrixTopologyKeepsSoftPenalty" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="StrictLocalNumaTest" />
+    <testcase name="IsCrossNumaRequiresBothSidesKnown" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="StrictLocalNumaTest" />
+  </testsuite>
+  <testsuite name="StrictLocalNumaEnvTest" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-10-10T04:40:27.632">
+    <testcase name="AcceptsNumericAndTextualBooleans" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="StrictLocalNumaEnvTest" />
+    <testcase name="UnrecognizedValueKeepsConfiguredValue" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="StrictLocalNumaEnvTest" />
+    <testcase name="IntegerEnvVarsAreUnaffected" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="StrictLocalNumaEnvTest" />
+  </testsuite>
+  <testsuite name="DeadlineMluTest" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-10-10T04:40:27.632">
+    <testcase name="PredictedTimeOverWindow" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="DeadlineMluTest" />
+    <testcase name="BytesAheadAddToPredictedTime" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="DeadlineMluTest" />
+    <testcase name="NoDeadlineOrNoBandwidthIsNotUrgent" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="DeadlineMluTest" />
+    <testcase name="PastDeadlineIsInfinitelyUrgent" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="DeadlineMluTest" />
+    <testcase name="ArbitrationUsesTheSameDefinition" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="DeadlineMluTest" />
+  </testsuite>
+  <testsuite name="BwArbitrationTest" tests="9" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-10-10T04:40:27.632">
+    <testcase name="BytesAheadFavorTheTighterWindow" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="BwArbitrationTest" />
+    <testcase name="EachSlotIsScoredBehindTheOnesBeforeIt" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="BwArbitrationTest" />
+    <testcase name="TighterDeadlineSortsFirst" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="BwArbitrationTest" />
+    <testcase name="NoDeadlineSortsLast" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="BwArbitrationTest" />
+    <testcase name="PastDeadlineSortsFirst" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="BwArbitrationTest" />
+    <testcase name="TiesKeepFifoOrder" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="BwArbitrationTest" />
+    <testcase name="AllNoDeadlineKeepsFifoOrder" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="BwArbitrationTest" />
+    <testcase name="ZeroBandwidthDisablesReorder" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="BwArbitrationTest" />
+    <testcase name="LongerTransferIsMoreUrgentAtSameDeadline" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="BwArbitrationTest" />
+  </testsuite>
+  <testsuite name="QuotaAccounting" tests="9" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-10-10T04:40:27.632">
+    <testcase name="AllocateChargesEachSliceItsOwnLength" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="QuotaAccounting" />
+    <testcase name="ATrailingShortSliceIsChargedItsRealLength" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="QuotaAccounting" />
+    <testcase name="ALongLastSliceIsChargedItsRealLength" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="QuotaAccounting" />
+    <testcase name="PlannedSlicesChargeAndReleaseBalance" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="QuotaAccounting" />
+    <testcase name="ChargeDeviceAndReleaseBalance" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="QuotaAccounting" />
+    <testcase name="ChargeOnAnUntrackedDeviceFailsAndChangesNothing" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="QuotaAccounting" />
+    <testcase name="NonSuccessCompletionDoesNotMoveEwma" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="QuotaAccounting" />
+    <testcase name="SuccessUpdatesEwmaWithLengthOverLatency" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="QuotaAccounting" />
+    <testcase name="BaselineModeKeepsInflightZero" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="QuotaAccounting" />
+  </testsuite>
+  <testsuite name="RailMonitorConfigTest" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-10-10T04:40:27.632">
+    <testcase name="CustomJsonOverridesAutomaticPeerMapping" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="RailMonitorConfigTest" />
+  </testsuite>
+  <testsuite name="RailMonitorCrossNumaTest" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-10-10T04:40:27.632">
+    <testcase name="CrossNumaPrefersSameNameDevice" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="RailMonitorCrossNumaTest" />
+  </testsuite>
+  <testsuite name="RailMonitorRecoverTest" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="1.5" timestamp="2026-10-10T04:40:27.632">
+    <testcase name="RecoverResetsErrorCount" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="RailMonitorRecoverTest" />
+    <testcase name="RecoverUnpausesPausedRail" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="RailMonitorRecoverTest" />
+    <testcase name="RecoverUnknownPairIsNoop" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="RailMonitorRecoverTest" />
+    <testcase name="FindBestAfterRecovery" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:27.632" classname="RailMonitorRecoverTest" />
+    <testcase name="CooldownDoesNotCarryOverAfterRecovery" status="run" result="completed" time="1.5" timestamp="2026-10-10T04:40:27.633" classname="RailMonitorRecoverTest" />
+  </testsuite>
+  <testsuite name="RailMonitorLifetimeTest" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-10-10T04:40:29.133">
+    <testcase name="KeepsSegmentSnapshotsAliveForFailureUpdates" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:29.133" classname="RailMonitorLifetimeTest" />
+  </testsuite>
+  <testsuite name="RailMonitorLoadTest" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-10-10T04:40:29.133">
+    <testcase name="SameLayoutReloadPreservesErrorCount" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:29.133" classname="RailMonitorLoadTest" />
+    <testcase name="DifferentLayoutRebuildsMapping" status="run" result="completed" time="0" timestamp="2026-10-10T04:40:29.133" classname="RailMonitorLoadTest" />
+  </testsuite>
+  <testsuite name="RailMonitorBurstTest" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="1.5" timestamp="2026-10-10T04:40:29.133">
+    <testcase name="BurstFailuresDoNotEscalateCooldown" status="run" result="completed" time="1.5" timestamp="2026-10-10T04:40:29.133" classname="RailMonitorBurstTest" />
+  </testsuite>
+  <testsuite name="RailMonitorHalfOpenTest" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="7.3" timestamp="2026-10-10T04:40:30.633">
+    <testcase name="TrialFailureEscalatesCooldown" status="run" result="completed" time="3.6" timestamp="2026-10-10T04:40:30.633" classname="RailMonitorHalfOpenTest" />
+    <testcase name="TrialSuccessResetsBackoff" status="run" result="completed" time="2.6" timestamp="2026-10-10T04:40:34.233" classname="RailMonitorHalfOpenTest" />
+    <testcase name="ExpiryAdmitsOneTrialNotFullReopen" status="run" result="completed" time="1.1" timestamp="2026-10-10T04:40:36.833" classname="RailMonitorHalfOpenTest" />
+  </testsuite>
+  <testsuite name="RailMonitorProbeTest" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="3.3" timestamp="2026-10-10T04:40:37.933">
+    <testcase name="InFlightProbeBlocksSecondAdmit" status="run" result="completed" time="2.2" timestamp="2026-10-10T04:40:37.933" classname="RailMonitorProbeTest" />
+    <testcase name="CancelProbeRevertsArmedTrial" status="run" result="completed" time="1.1" timestamp="2026-10-10T04:40:40.133" classname="RailMonitorProbeTest" />
+  </testsuite>
+</testsuites>

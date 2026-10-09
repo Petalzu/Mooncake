@@ -1,0 +1,52 @@
+{
+  "aggregation_thresholds": {
+    "host_read_one_byte_below_2_mib": 32,
+    "host_write_one_byte_below_1_mib": 16
+  },
+  "cpp_policy_oracle_checks": 810,
+  "ewma_after_one_sample_bps": 5050000000.0,
+  "rdma_hardware_used": false,
+  "scope": "real upstream DeviceSelector, extracted slice planner, standalone policy prototype",
+  "slice_plan_accounting_checks": 2620,
+  "upstream_allocations": [
+    {
+      "allocation": [
+        32,
+        32
+      ],
+      "balanced_after_release": true,
+      "link_gbps": [
+        80.0,
+        80.0
+      ],
+      "name": "symmetric",
+      "second_queue_bytes": 0
+    },
+    {
+      "allocation": [
+        43,
+        21
+      ],
+      "balanced_after_release": true,
+      "link_gbps": [
+        160.0,
+        80.0
+      ],
+      "name": "bandwidth_2_to_1",
+      "second_queue_bytes": 0
+    },
+    {
+      "allocation": [
+        63,
+        1
+      ],
+      "balanced_after_release": true,
+      "link_gbps": [
+        80.0,
+        80.0
+      ],
+      "name": "one_path_queued",
+      "second_queue_bytes": 2097152
+    }
+  ]
+}

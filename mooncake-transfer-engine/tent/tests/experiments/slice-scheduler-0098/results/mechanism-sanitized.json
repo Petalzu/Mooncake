@@ -1,0 +1,13 @@
+{
+  "scope": "standalone_mechanism_and_synthetic_feedback_not_TENT_integration",
+  "rdma_hardware_used": false,
+  "cache_invariant_checks": 11,
+  "affine_plan_oracle_checks": 1620,
+  "fallback_checks": 12,
+  "synthetic_replay_checks": 1004,
+  "replay_seeds": [17, 29, 53, 97, 193],
+  "bandwidth_reversal_first_request_can_regress": true,
+  "recovery_after_eight_varied_probe_observations": true,
+  "queued_allocation": [48, 16],
+  "queued_predicted_time": 48
+}

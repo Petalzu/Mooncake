@@ -1,0 +1,251 @@
+{
+  "commit": "db6f14bd019d7fe08b2497e88046b72384af287f",
+  "generatedAt": "2026-10-09T20:40:46.024Z",
+  "scriptSha256": "1c27a0b3e22d5373f2e9a928676fbbb71cdde05afb0005adde9e01def789ca20",
+  "kind": "independent_path_model_not_rdma_benchmark",
+  "units": "normalized_bytes_and_time",
+  "assumptions": [
+    "constant independent path rates",
+    "known fixed queues and startup delays",
+    "equal slices, no shared NIC or memory bottlenecks",
+    "inverse-score baseline omits NUMA, epsilon, jitter and probing"
+  ],
+  "oracleChecks": 810,
+  "guardChecks": 7,
+  "results": [
+    {
+      "name": "symmetric",
+      "paths": [
+        {
+          "rate": 1,
+          "queue": 0,
+          "startup": 0
+        },
+        {
+          "rate": 1,
+          "queue": 0,
+          "startup": 0
+        }
+      ],
+      "sliceCount": 64,
+      "current": {
+        "allocation": [
+          32,
+          32
+        ],
+        "completion": 32
+      },
+      "uniform": {
+        "allocation": [
+          32,
+          32
+        ],
+        "completion": 32
+      },
+      "candidate": {
+        "allocation": [
+          32,
+          32
+        ],
+        "completion": 32
+      }
+    },
+    {
+      "name": "bandwidth_2_to_1",
+      "paths": [
+        {
+          "rate": 2,
+          "queue": 0,
+          "startup": 0
+        },
+        {
+          "rate": 1,
+          "queue": 0,
+          "startup": 0
+        }
+      ],
+      "sliceCount": 64,
+      "current": {
+        "allocation": [
+          43,
+          21
+        ],
+        "completion": 21.5
+      },
+      "uniform": {
+        "allocation": [
+          32,
+          32
+        ],
+        "completion": 32
+      },
+      "candidate": {
+        "allocation": [
+          43,
+          21
+        ],
+        "completion": 21.5
+      }
+    },
+    {
+      "name": "one_path_queued",
+      "paths": [
+        {
+          "rate": 1,
+          "queue": 0,
+          "startup": 0
+        },
+        {
+          "rate": 1,
+          "queue": 32,
+          "startup": 0
+        }
+      ],
+      "sliceCount": 64,
+      "current": {
+        "allocation": [
+          63,
+          1
+        ],
+        "completion": 63
+      },
+      "uniform": {
+        "allocation": [
+          32,
+          32
+        ],
+        "completion": 64
+      },
+      "candidate": {
+        "allocation": [
+          48,
+          16
+        ],
+        "completion": 48
+      }
+    }
+  ],
+  "staleCounterexample": {
+    "historicalEstimates": [
+      {
+        "rate": 1,
+        "queue": 0,
+        "startup": 0,
+        "samples": 16,
+        "ageMs": 1,
+        "coefficientOfVariation": 0.01
+      },
+      {
+        "rate": 5,
+        "queue": 0,
+        "startup": 0,
+        "samples": 16,
+        "ageMs": 1,
+        "coefficientOfVariation": 0.01
+      }
+    ],
+    "actualPaths": [
+      {
+        "rate": 5,
+        "queue": 0,
+        "startup": 0,
+        "samples": 16,
+        "ageMs": 1,
+        "coefficientOfVariation": 0.01
+      },
+      {
+        "rate": 1,
+        "queue": 0,
+        "startup": 0,
+        "samples": 16,
+        "ageMs": 1,
+        "coefficientOfVariation": 0.01
+      }
+    ],
+    "guarded": {
+      "allocation": [
+        13,
+        51
+      ],
+      "reason": "bounded_adaptation"
+    },
+    "guardedActualCompletion": 51,
+    "uniformActualCompletion": 32
+  },
+  "sharedNicCounterexample": {
+    "paths": [
+      {
+        "rate": 1,
+        "queue": 0,
+        "startup": 0,
+        "samples": 16,
+        "ageMs": 1,
+        "coefficientOfVariation": 0.01,
+        "local": 0,
+        "remote": 0
+      },
+      {
+        "rate": 1,
+        "queue": 0,
+        "startup": 0,
+        "samples": 16,
+        "ageMs": 1,
+        "coefficientOfVariation": 0.01,
+        "local": 1,
+        "remote": 0
+      },
+      {
+        "rate": 1,
+        "queue": 0,
+        "startup": 0,
+        "samples": 16,
+        "ageMs": 1,
+        "coefficientOfVariation": 0.01,
+        "local": 1,
+        "remote": 1
+      }
+    ],
+    "independentAllocation": [
+      22,
+      21,
+      21
+    ],
+    "independentPredictedCompletion": 22,
+    "sharedResourceCompletion": 43,
+    "sharedOptimalAllocation": [
+      32,
+      0,
+      32
+    ],
+    "sharedOptimum": 32,
+    "enumeratedAllocations": 2145
+  },
+  "explorationCounterexample": {
+    "paths": [
+      {
+        "rate": 1,
+        "queue": 0,
+        "startup": 0,
+        "samples": 16,
+        "ageMs": 1,
+        "coefficientOfVariation": 0.01
+      },
+      {
+        "rate": 1,
+        "queue": 0,
+        "startup": 100,
+        "samples": 16,
+        "ageMs": 1,
+        "coefficientOfVariation": 0.01
+      }
+    ],
+    "boundedAllocation": [
+      51,
+      13
+    ],
+    "withoutForcedExploration": [
+      64,
+      0
+    ]
+  }
+}
